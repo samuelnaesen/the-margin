@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Margin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="book" id="book" aria-live="polite">
+
+  <!-- Spread 0: cover (single recto) -->
+  <section class="spread cover-spread" data-spread="0">
+    <article class="page recto cover">
+      <div class="text-block">
+        <p class="cover-kicker">A Manual of Composition</p>
+        <h1 class="cover-title">The <em>Margin</em></h1>
+        <p class="cover-sub">On the setting of type, the framing of pages,<br>and the keeping of a careful hand.</p>
+        <p class="cover-imprint">Holloway &amp; Sons, Printers &middot; 1963</p>
+      </div>
+      <p class="note typed" style="--top: 30">THIS COPY HAS BEEN READ BEFORE.</p>
+      <p class="note hand foot">Property of R.H. Please return. Please do not write in it.</p>
+    </article>
+  </section>
+
+  <!-- Spread 1 -->
+  <section class="spread" data-spread="1">
+    <article class="page verso">
+      <div class="text-block">
+        <h2>III. On <em>Margins</em></h2>
+        <p>A page is not filled; it is framed. The careful compositor <b class="dark">begins</b> with the margins, and only afterwards with the words.</p>
+        <p>Divide the leaf into nine parts, both across and down. Give one part to the inner margin and one to the head. Give two to the outer margin and two to the foot. What remains is the text area, and it keeps the very proportions of the page itself.</p>
+        <p>This rule is old. It was not invented so much as found, the way one finds a path <b class="dark">with</b> one&rsquo;s feet before one finds it on a map.</p>
+      </div>
+      <p class="note hand" style="--top: 14; --tilt: -3deg">Who has been writing in my copy?<span class="sig">&mdash; R.H., 3 March</span></p>
+      <p class="note hand foot">Some words on these pages are darker than the rest. I did not do that.</p>
+      <p class="folio">12</p>
+    </article>
+    <article class="page recto">
+      <div class="text-block">
+        <p>The outer margin is the widest because the eye must rest somewhere, and because readers have always used it: for sums, for objections, for prayers.</p>
+        <p>Study <b class="dark">the</b> example in <b class="dark">plate</b> <b class="dark">B</b>, a page of 1491 whose margins are crowded with the notes of four owners. Each wrote as if alone. None was.</p>
+        <p>A margin is where a book is answered. The compositor who leaves too little of it has decided, without asking, that no one will ever reply.</p>
+        <p>Leave room, then. Someone is always reading over your shoulder, and sooner or later they will want to say something back.</p>
+      </div>
+      <p class="note typed" style="--top: 16; --tilt: 1.5deg">CORRECTION: YOUR COPY HAS BEEN WRITING IN ME.</p>
+      <p class="folio">13</p>
+    </article>
+  </section>
+
+  <!-- Spread 2: candle + wrong folios -->
+  <section class="spread candle-spread" data-spread="2">
+    <article class="page verso candle">
+      <div class="text-block">
+        <h2>IV. On <em>Ink</em></h2>
+        <p>Good ink sits on the paper; poor ink sinks into it. The first is read, the second is merely seen.</p>
+        <p>There are inks that do neither. Lemon, milk, and certain salts dry to nothing and wait. Warmth brings them back, browned and faint, as if the page were remembering something it had been told not to say.</p>
+        <p>Such inks have no place in honest printing.</p>
+      </div>
+      <p class="note hand" style="--top: 12; --tilt: -2deg">Hold a flame near the page. Gently.</p>
+      <p class="ink-hidden" aria-label="Hidden ink: the second letter is O">the second letter<br>is O</p>
+      <p class="folio">20</p>
+    </article>
+    <article class="page recto candle">
+      <div class="text-block">
+        <p>Order matters as much as ink. A book bound out of sequence is not a book but a heap, and the folio, the humble page number, is all that stands between them.</p>
+        <p>Check every folio before the sheets go to the binder. A reader forgives a misspelling. A reader does not forgive being lost.</p>
+        <p>When in doubt, count. The numbers will tell you where you are, even when the words will not.</p>
+      </div>
+      <p class="note typed" style="--top: 14; --tilt: 1deg">YOUR PAGE NUMBERS WERE WRONG. I FIXED THEM.</p>
+      <p class="note hand foot">He changed the folios. Twenty, then eight. Count the alphabet.</p>
+      <p class="folio">8</p>
+    </article>
+  </section>
+
+  <!-- Spread 3: the lock -->
+  <section class="spread" data-spread="3">
+    <article class="page verso">
+      <div class="text-block">
+        <h2>V. On <em>Authorship</em></h2>
+        <p>The compositor sets another&rsquo;s words, letter by letter, until his hands know them better than the author does.</p>
+        <p>By the end of a long book it can be hard to say whose hand set which line. This is not a fault. It is what working closely does.</p>
+        <p>Two hands on one page, given long enough, begin to keep the same time.</p>
+      </div>
+      <p class="note hand" style="--top: 12; --tilt: -2.5deg">It wants a word. Four letters. I think I already know it.</p>
+      <p class="note typed foot">QUESTION: WHO WROTE THE MARGINS?</p>
+      <p class="folio">21</p>
+    </article>
+    <article class="page recto">
+      <div class="text-block lock-block">
+        <form class="lock" id="lock" autocomplete="off">
+          <p class="lock-q">Who wrote the margins?</p>
+          <div class="lock-boxes">
+            <input maxlength="1" aria-label="Letter 1"><input maxlength="1" aria-label="Letter 2"><input maxlength="1" aria-label="Letter 3"><input maxlength="1" aria-label="Letter 4">
+          </div>
+          <p class="lock-msg typed-inline" id="lock-msg" role="status"></p>
+        </form>
+        <div class="ending" id="ending" hidden>
+          <p class="hand-inline">12 November. I have checked the typewriter. It has no ribbon. I have checked my pen. It is dry.</p>
+          <p class="hand-inline">And still the notes keep coming, in both hands. Perhaps that is all a margin is: the place where a reader becomes a writer.</p>
+          <p class="typed-inline">YOU HAVE BEEN WRITING HERE TOO.</p>
+          <p class="typed-inline">THANK YOU FOR READING. WE BOTH ENJOYED IT.</p>
+        </div>
+      </div>
+      <p class="folio">22</p>
+    </article>
+  </section>
+
+</main>
+
+<nav class="controls" aria-label="Page controls">
+  <button id="prev" aria-label="Previous page">&larr;</button>
+  <span id="pos"></span>
+  <button id="next" aria-label="Next page">&rarr;</button>
+</nav>
+<p class="hint">Turn pages with &larr; &rarr; or swipe. Press <kbd>G</kbd> to see the grid.</p>
+
+<script src="main.js"></script>
+</body>
+</html>

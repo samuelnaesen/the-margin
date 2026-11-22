@@ -50,7 +50,7 @@ Use container units so top/bottom use height and left/right use width:
 Never hard-code pixel margins. Always derive from the page box.
 
 ## Type fits the block
-- Pick body size so the text block holds about 30-40 lines and 55-70 characters per line.
+- Pick body size so lines hold about 50-65 characters (body is 3.55cqw in style.css). On screen that gives roughly 20-25 lines per block; keep each page's text short rather than shrinking type.
 - Set line-height as a fixed unit and snap all vertical spacing to it (baseline rhythm).
 - Text must fit inside the block with no scroll. If it overflows, cut text or reduce lines; do not shrink margins.
 
@@ -60,5 +60,8 @@ Show a single page at the same 2:3 ratio. Treat it as a recto. Turn the spread w
 ## Debug overlay
 Press `G` to draw the construction: both page diagonals, the spread diagonals, and the text block outline. Keep this in the build; it helps checks and is a nice hidden extra.
 
+## Work order (from BONT's method)
+Lay out freely first, then turn on the grid (`G`) and snap edges to its lines and crossings. Where no line fits, use a fixed gap instead of forcing it.
+
 ## Verify (do this after every layout change)
-Run a Playwright check at 1440x900 and 390x844 that measures each `.text-block` against its `.page` and fails if any edge is off by more than 1px from the ninths above, or if any text overflows its block.
+Run `node tests/check-canon.mjs` (add `--shots <dir>` for screenshots). It checks 1440x900 and 390x844, measures each `.text-block` against its `.page` and fails if any edge is off by more than 1px from the ninths above, or if any text overflows its block.
